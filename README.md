@@ -24,6 +24,16 @@ basemap tiles. The build scripts (steps 05 to 40) live with the training package
 4. Select branch main and folder / (root), then Save.
 5. Wait one or two minutes; the site appears at https://ahwalab.github.io/A-B_warnings/
 
+## Basemap key
+
+The CARTO raster basemaps (Light and Voyager) require an API key since 2026; without it the
+tiles carry an "API KEY REQUIRED" watermark. The page carries the University of Iowa key in
+the `CARTO_KEY` constant near the top of its script block. To change the key, edit that one
+line in the built page, or in the template of the training package pipeline and rebuild.
+The key is visible in the page source by design (client side tile requests); it can be
+restricted to the site domain in the CARTO account settings. The OpenStreetMap and Esri
+satellite basemaps do not use it.
+
 ## What it shows
 
 Uncertainty quantified flood potential from the TITO EF5 CREST ensemble for Tropical
