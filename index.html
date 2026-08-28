@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Warning Products Portal, Antigua and Barbuda</title>
+<style>
+:root{--paper:#f6f7f8;--card:#ffffff;--ink:#17212b;--ink2:#43505c;--muted:#78848f;--line:#e2e6ea;--accent:#0e5a8a}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--paper);color:var(--ink);
+  font:15px/1.55 "Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:48px 24px 32px;display:flex;flex-direction:column;min-height:100%}
+.over{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700}
+h1{font-size:30px;margin:6px 0 2px;font-weight:700;letter-spacing:-.01em}
+.sub{color:var(--ink2);margin:10px 0 0;max-width:64ch}
+.bar{height:10px;display:flex;border-radius:2px;overflow:hidden;border:1px solid var(--line);margin:26px 0 6px;max-width:520px}
+.bar div{flex:1}
+.barlab{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);max-width:520px;margin-bottom:26px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+@media (max-width:640px){.cards{grid-template-columns:1fr}}
+a.card{display:block;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:4px;padding:20px 22px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--accent)}
+a.card .t{font-size:18px;font-weight:700;color:var(--accent)}
+a.card .d{font-size:13.5px;color:var(--ink2);margin-top:6px}
+a.card .go{display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent)}
+.notes{margin-top:30px;font-size:13px;color:var(--ink2);max-width:74ch}
+.notes b{color:var(--ink)}
+footer{margin-top:auto;padding-top:34px;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="over">TITO Antigua and Barbuda</div>
+  <h1>Warning Products Portal</h1>
+  <p class="sub">Uncertainty quantified flood potential products for Antigua and Barbuda, from the TITO EF5 ensemble on the 30 m national domain. Demonstration case: Tropical Storm Jerry, 9 to 11 October 2025, 48 hourly forecast cycles.</p>
+
+  <div class="bar">
+    <div style="background:#CDEFE1"></div><div style="background:#8ED8EA"></div><div style="background:#46B0C6"></div><div style="background:#2B66D9"></div>
+    <div style="background:#FFE14D"></div><div style="background:#FFA22E"></div><div style="background:#E85C22"></div><div style="background:#A50F0F"></div>
+  </div>
+  <div class="barlab"><b>Low</b><span>Flood Potential</span><b>High</b></div>
+
+  <div class="cards">
+    <a class="card" href="en.html">
+      <div class="t">English</div>
+      <div class="d">Flood potential application: potential zones for every cycle, ensemble probabilities, EF5 unit streamflow layers, impact adjusted view built on the Overture receptor base, QPE verification, gauge hydrographs and the reported impacts of the event.</div>
+      <span class="go">Open the application</span>
+    </a>
+  </div>
+
+  <p class="notes"><b>Note:</b> this product shows flood potential; issuing official warnings remains the mandate of the national institutions. The application is self contained; an internet connection is only needed for the basemap tiles.</p>
+  <p class="notes">Companion products for the same hindcast: the <a href="https://ahwalab.github.io/A-B_FIM/">FIM Results Viewer</a> (flood likelihood mosaics per cycle) and the <a href="https://ahwalab.github.io/A-B_IBF/">IBF Flood Warning Map</a> (warning levels per building, road and parish).</p>
+
+  <footer>Co developed demonstration, WMO, University of Iowa and partners in Antigua and Barbuda (AHWA Lab). Prototype, not operational.</footer>
+</div>
+</body>
+</html>
