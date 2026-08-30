@@ -759,8 +759,6 @@ details table.mx td,details table.mx th{border:1px solid var(--line);padding:3px
 .leaflet-popup-content table.pt td{padding:1.5px 4px;vertical-align:top;font-variant-numeric:tabular-nums}
 .leaflet-popup-content table.pt td:first-child{color:#6b7680;padding-right:8px;white-space:nowrap}
 .leaflet-control-attribution{font-size:10px}
-.leaflet-popup-close-button{font-size:0 !important}
-.leaflet-popup-close-button::after{content:'x';font-size:14px;line-height:24px}
 .small{font-size:11px;color:var(--muted)}
 footer{padding:6px 18px;font-size:11px;color:var(--muted);border-top:1px solid var(--line);background:var(--card)}
 .tlwrap{padding:6px 18px 4px;background:var(--card);border-bottom:1px solid var(--line)}
@@ -901,6 +899,7 @@ const bases={
 };
 bases.carto.addTo(map);
 document.getElementById('baseSel').onchange=e=>{Object.values(bases).forEach(b=>map.removeLayer(b));bases[e.target.value].addTo(map);};
+map.on('popupopen', e=>{const b=e.popup&&e.popup._closeButton; if(b) b.innerHTML='x';});
 L.control.scale({metric:true,imperial:false}).addTo(map);
 function ptable(rows){return '<table class="pt">'+rows.filter(r=>r[1]!==null&&r[1]!==undefined&&r[1]!=='').map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>';}
 function isFeatured(c){return D.featured.indexOf(c)>=0;}
